@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pokémon Search App">
+  <meta name="author" content="AKASH CHOUDHARY">
+  <title>Poké Kingdom</title>
+  <link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="../static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../static/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="heading">
+      <div class="navbar-brand" id="myname">Poké Kingdom</div>
+    </div>
+    <img class="image-position" src="{{image_url}}" style="margin-left:20em;margin-bottom:0">
+    <form class="navbar-form navbar-right search-form" method="POST">
+      <div class="input-group">
+        <input type="text" class="form-control search-form" placeholder="Enter Pokémon name" size=30 name="pokemon" id="pokemon">
+        <span class="input-group-btn">
+          <button type="submit" class="btn btn-default search-btn">
+            <span class="fa fa-search"></span>
+          </button>
+        </span>
+      </div>
+    </form>
+  </div>
+  <div>
+    <table class="left-table">
+      <tr>
+        <td><input class="attribute" title="Name" placeholder="Name" type = "text" id = "name" name = "name" value={{name}}></td>
+      </tr>
+      <tr>
+        <td><input class="attribute" title="Height" placeholder="Height" type = "text" id = "height" name = "height" value={{height}}></td>
+      </tr>
+      <tr>
+        <td><input class="attribute" title="Weight" placeholder="Weight" type = "text" id = "weight" name = "weight" value={{weight}}></td>
+      </tr>
+      </table>
+      <table class="right-table">
+        <tr>
+          <td><input class="attribute" title="Base_Experience" placeholder="Base_Experience" type = "text" id = "Base_Experience" name = "Base_Experience" value={{base_experience}}></td>
+        </tr>
+        <tr>
+            <td><input class="attribute" title="Type" placeholder="Type" type = "text" id = "type" name = "type" value={{type}}></td>
+        </tr>
+        <tr>
+            <td><input class="attribute" title="Abilities" placeholder="Abilities" type = "text" id = "Abilities" name = "Abilities" value={{abilities}}></td>
+        </tr>
+      </table>
+  </div>
+  <div class="stats-relative">
+    <div class="stats-absolute">
+      <div class="stats-position">
+      </div><br>
+      <table class="table-position">
+        <tr>
+          <th class="table-heading">Base Stats</th>
+          <th class="table-heading">Values</th>
+        </tr>
+        <tr>
+          <td class="statistics-parameters">Speed</td>
+          <td class="statistics-values">{{speed}}</td>
+          <td><hr class="speed" width={{speed}} title={{speed}}></td>
+        </tr>
+        <tr>
+          <td class="statistics-parameters">Special-Defense</td>
+          <td class="statistics-values">{{special_defense}}</td>
+          <td><hr class="special-defense" width={{special_defense}} title={{special_defense}}></td>
+        </tr>
+        <tr>
+          <td class="statistics-parameters">Special-Attack</td>
+          <td class="statistics-values">{{special_attack}}</td>
+          <td><hr class="special-attack" width={{special_attack}} title={{special_attack}}></td>
+        </tr>
+        <tr>
+          <td class="statistics-parameters">Defense</td>
+          <td class="statistics-values">{{defense}}</td>
+          <td><hr class="defense" width={{defense}} title={{defense}}></td>
+        </tr>
+        <tr>
+          <td class="statistics-parameters">Attack</td>
+          <td class="statistics-values">{{attack}}</td>
+          <td><hr class="attack" width={{attack}} title={{attack}}></td>
+        </tr>
+        <tr>
+          <td class="statistics-parameters">HP</td>
+          <td class="statistics-values">{{hp}}</td>
+          <td><hr class="hp" width={{hp}} title={{hp}}></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
