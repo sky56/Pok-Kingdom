@@ -6,17 +6,16 @@ body
   -o-background-size: cover;
   background-size: cover;
 }
+.navbar-position
+{
+  margin-top: 1em;
+}
 .navbar
 {
   background: none;
 }
-.image-position
-{
-  margin-left: 5em;
-}
 .search-form
 {
-  margin-right: 3em;
   border-radius: 30px 0px 0px 30px;
 }
 .form-control
@@ -33,11 +32,6 @@ body
 {
   color: #fff;
 }
-.heading
-{
-  margin-top: 15px;
-  margin-left:9em;
-}
 #myname
 {
   font-size:30px;
@@ -46,19 +40,6 @@ body
   margin-top:2px;
   font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
   font-stretch: expanded
-}
-div>table
-{
-  float: left;
-  margin-top: -10px;
-}
-.left-table
-{
-  margin-left: 12em;
-}
-.right-table
-{
-  margin-left: 15em;
 }
 .attribute
 {
@@ -76,28 +57,8 @@ input.placeholder
 {
   text-align: center;
 }
-.stats-relative
-{
-  margin-right:250px
-}
-.stats-absolute
-{
-  margin-left:50px;
-  margin-top:250px
-}
-.stats-absolute > h3
-{
-  margin-left: 140px;
-  font-weight: bolder;
-  color:#808080;
-}
-.table-position
-{
-  margin-left: 0px;
-}
 .table-heading
 {
-  margin-left: 2px;
   font-weight:bold;
   font-size:18px;
   color:#808080;
