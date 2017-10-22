@@ -156,7 +156,7 @@ hr
 }
 .speed + .tooltip > .tooltip-arrow
 {
-  border-left-color: blue;
+  border-top-color: blue;
 }
 .special-defense + .tooltip > .tooltip-inner
 {
@@ -166,7 +166,7 @@ hr
 }
 .special-defense + .tooltip > .tooltip-arrow
 {
-  border-left-color: green;
+  border-top-color: green;
 }
 .special-attack + .tooltip > .tooltip-inner
 {
@@ -176,7 +176,7 @@ hr
 }
 .special-attack + .tooltip > .tooltip-arrow
 {
-  border-left-color: red;
+  border-top-color: red;
 }
 .defense + .tooltip > .tooltip-inner
 {
@@ -186,7 +186,7 @@ hr
 }
 .defense + .tooltip > .tooltip-arrow
 {
-  border-left-color: teal;
+  border-top-color: teal;
 }
 .attack + .tooltip > .tooltip-inner
 {
@@ -196,7 +196,7 @@ hr
 }
 .attack + .tooltip > .tooltip-arrow
 {
-  border-left-color: #B8860B;
+  border-top-color: #B8860B;
 }
 .hp + .tooltip > .tooltip-inner
 {
@@ -206,5 +206,5 @@ hr
 }
 .hp + .tooltip > .tooltip-arrow
 {
-  border-left-color: #8B008B;
+  border-top-color: #8B008B;
 }

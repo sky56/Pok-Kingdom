@@ -3,5 +3,5 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-    $('[data-toggle="tooltip-stat"]').tooltip({placement:'left'});
+    $('[data-toggle="tooltip-stat"]').tooltip({placement:'top'});
 });
