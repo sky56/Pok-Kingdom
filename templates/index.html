@@ -8,15 +8,22 @@
     <meta name="description" content="Pokémon Search App">
     <meta name="author" content="AKASH CHOUDHARY">
     <title>Poké Kingdom</title>
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="../static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
     <link href="../static/css/style.css" rel="stylesheet" type="text/css">
+
+
 </head>
 
 <body>
+    <p class="error empty">{{error_empty_message}}</p>
+    <p class="error wrong">{{error_message}}</p>
     <div class="container-fluid navbar-position">
         <div class="col-xs-12 col-sm-4 col-md-4 text-center">
             <div class="navbar-brand" id="myname">Poké Kingdom</div>
@@ -40,31 +47,31 @@
         <div class="col-xs-12 col-sm-6 col-md-6 col-sm-offset-1 col-md-offset-1">
             <table>
                 <tr>
-                        <td><input class="attribute" title="Name" placeholder="Name" type = "text" id = "name" name = "name" value={{name}}></td>
+                        <td><input class="attribute pok-name" title="Name" placeholder="Name" type = "text" id = "name" name = "name" data-toggle="tooltip-attribute" value={{name}}></td>
                 </tr>
                 <tr>
-                        <td><input class="attribute" title="Height" placeholder="Height" type = "text" id = "height" name = "height" value={{height}}></td>
+                        <td><input class="attribute" title="Height" placeholder="Height" type = "text" id = "height" name = "height" data-toggle="tooltip-attribute" value={{height}}></td>
                 </tr>
                 <tr>
-                        <td><input class="attribute" title="Weight" placeholder="Weight" type = "text" id = "weight" name = "weight" value={{weight}}></td>
+                        <td><input class="attribute" title="Weight" placeholder="Weight" type = "text" id = "weight" name = "weight" data-toggle="tooltip-attribute" value={{weight}}></td>
                 </tr>
             </table>
         </div>
         <div class="col-xs-12 col-sm-5 col-md-5">
             <table>
                 <tr>
-                        <td><input class="attribute" title="Base_Experience" placeholder="Base_Experience" type = "text" id = "Base_Experience" name = "Base_Experience" value={{base_experience}}></td>
+                        <td><input class="attribute" title="Base_Experience" placeholder="Base_Experience" type = "text" id = "base_experience" data-toggle="tooltip-attribute" name = "Base_Experience" value={{base_experience}}></td>
                 </tr>
                 <tr>
-                        <td><input class="attribute" title="Type" placeholder="Type" type = "text" id = "type" name = "type" value={{type}}></td>
+                        <td><input class="attribute" title="Type" placeholder="Type" type = "text" id = "type" name = "type" data-toggle="tooltip-attribute" value={{type}}></td>
                 </tr>
                 <tr>
-                        <td><input class="attribute" title="Abilities" placeholder="Abilities" type = "text" id = "Abilities" name = "Abilities" value={{abilities}}></td>
+                        <td><input class="attribute" title="Abilities" placeholder="Abilities" type = "text" id = "Abilities" name = "Abilities" data-toggle="tooltip-attribute" value={{abilities}}></td>
                 </tr>
             </table>
         </div>
     </div>
-        
+
     <div class="container-fluid">
         <div class="col-xs-12">
             <br><br><br>
@@ -76,35 +83,36 @@
                 <tr>
                         <td class="statistics-parameters">Speed</td>
                         <td class="statistics-values">{{speed}}</td>
-                        <td><hr class="speed" width={{speed}} title={{speed}}></td>
+                        <td><hr class="stat-tooltip speed" data-toggle="tooltip-stat" width={{speed}} title={{speed}}></td>
                 </tr>
                 <tr>
                         <td class="statistics-parameters">Special-Defense</td>
                         <td class="statistics-values">{{special_defense}}</td>
-                        <td><hr class="special-defense" width={{special_defense}} title={{special_defense}}></td>
+                        <td><hr class="stat-tooltip special-defense" data-toggle="tooltip-stat" width={{special_defense}} title={{special_defense}}></td>
                 </tr>
                 <tr>
                         <td class="statistics-parameters">Special-Attack</td>
                         <td class="statistics-values">{{special_attack}}</td>
-                        <td><hr class="special-attack" width={{special_attack}} title={{special_attack}}></td>
+                        <td><hr class="stat-tooltip special-attack" data-toggle="tooltip-stat" width={{special_attack}} title={{special_attack}}></td>
                 </tr>
                 <tr>
                         <td class="statistics-parameters">Defense</td>
                         <td class="statistics-values">{{defense}}</td>
-                        <td><hr class="defense" width={{defense}} title={{defense}}></td>
+                        <td><hr class="stat-tooltip defense" data-toggle="tooltip-stat" width={{defense}} title={{defense}}></td>
                 </tr>
                 <tr>
                         <td class="statistics-parameters">Attack</td>
                         <td class="statistics-values">{{attack}}</td>
-                        <td><hr class="attack" width={{attack}} title={{attack}}></td>
+                        <td><hr class="stat-tooltip attack" data-toggle="tooltip-stat" width={{attack}} title={{attack}}></td>
                 </tr>
                 <tr>
                         <td class="statistics-parameters">HP</td>
                         <td class="statistics-values">{{hp}}</td>
-                        <td><hr class="hp" width={{hp}} title={{hp}}></td>
+                        <td><hr class="stat-tooltip hp" data-toggle="tooltip-stat" width={{hp}} title={{hp}}></td>
                 </tr>
             </table>
         </div>
     </div>
+    <script src="../static/js/tooltip.js"></script>
 </body>
 </html>

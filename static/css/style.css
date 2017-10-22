@@ -6,6 +6,22 @@ body
   -o-background-size: cover;
   background-size: cover;
 }
+.error
+{
+  text-align: center;
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: 15px;
+  margin-top: 10px;
+}
+.empty
+{
+  color: blue;
+}
+.wrong
+{
+  color: red;
+}
 .navbar-position
 {
   margin-top: 1em;
@@ -104,9 +120,91 @@ hr
 }
 .attack
 {
-  background-color: #DAA520;
+  background-color: #B8860B;
 }
 .hp
 {
   background-color: #8B008B;
+}
+.attribute + .tooltip > .tooltip-inner
+{
+  background-color: #000;
+  color: #fff;
+  font-style: italic;
+  font-weight: bold;
+  font-family: monospace;
+  border: 1px solid #000;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 13px;
+}
+.stat-tooltip + .tooltip > .tooltip-inner
+{
+  font-style: italic;
+  font-weight: bold;
+  font-family: monospace;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 11px;
+  height : 22px;
+}
+.speed + .tooltip > .tooltip-inner
+{
+  background-color: blue;
+  color: #fff;
+  border: 1px solid blue;
+}
+.speed + .tooltip > .tooltip-arrow
+{
+  border-right-color: blue;
+}
+.special-defense + .tooltip > .tooltip-inner
+{
+  background-color: green;
+  color: #fff;
+  border: 1px solid green;
+}
+.special-defense + .tooltip > .tooltip-arrow
+{
+  border-right-color: green;
+}
+.special-attack + .tooltip > .tooltip-inner
+{
+  background-color: red;
+  color: #fff;
+  border: 1px solid red;
+}
+.special-attack + .tooltip > .tooltip-arrow
+{
+  border-right-color: red;
+}
+.defense + .tooltip > .tooltip-inner
+{
+  background-color: teal;
+  color: #fff;
+  border: 1px solid teal;
+}
+.defense + .tooltip > .tooltip-arrow
+{
+  border-right-color: teal;
+}
+.attack + .tooltip > .tooltip-inner
+{
+  background-color: #B8860B;
+  color: #fff;
+  border: 1px solid #B8860B;
+}
+.attack + .tooltip > .tooltip-arrow
+{
+  border-right-color: #B8860B;
+}
+.hp + .tooltip > .tooltip-inner
+{
+  background-color: #8B008B;
+  color: #fff;
+  border: 1px solid #8B008B;
+}
+.hp + .tooltip > .tooltip-arrow
+{
+  border-right-color: #8B008B;
 }
