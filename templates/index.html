@@ -26,19 +26,19 @@
     <p class="error wrong">{{error_message}}</p>
     <div class="container-fluid navbar-position">
         <div class="col-xs-12 col-sm-4 col-md-4 text-center">
-            <div class="navbar-brand" id="myname">Poké Kingdom</div>
+            <div class="navbar-brand" id="myname"><strong>Poké Kingdom</strong></div>
         </div>
         <form class="navbar-form search-form col-xs-12 col-sm-4 col-md-4 text-center pull-right" method="POST">
             <div class="input-group">
                 <input type="text" class="form-control search-form" placeholder="Enter Pokémon name" size=35 name="pokemon" id="pokemon">
                 <span class="input-group-btn">
-                    <button type="submit" class="btn btn-default search-btn">
+                    <button class="btn btn-default search-btn" type="submit" name="submit" value="Search Pokemon">
                         <span class="fa fa-search"></span>
                     </button>
                 </span>
             </div>
         </form>
-        <div class="col-xs-12 col-sm-4 col-md-4 text-center pull-left">
+        <div class="col-xs-12 col-sm-4 col-md-4 text-center pull-left zoom_img_me">
             <img src="{{image_url}}">
         </div>
     </div>
@@ -113,6 +113,7 @@
             </table>
         </div>
     </div>
+    {% include download_pokemon %}
     <script src="../static/js/tooltip.js"></script>
 </body>
 </html>

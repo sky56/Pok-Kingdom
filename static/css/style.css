@@ -54,8 +54,12 @@ body
   font-weight: bolder;
   color:	#2F4F4F;
   margin-top:2px;
-  font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
-  font-stretch: expanded
+  font-family: cursive;
+  font-stretch: semi-expanded;
+}
+.zoom_img_me img:hover
+{
+    transform: scale(1.1);
 }
 .attribute
 {
@@ -207,4 +211,25 @@ hr
 .hp + .tooltip > .tooltip-arrow
 {
   border-top-color: #8B008B;
+}
+.download-link
+{
+  margin-bottom: 10px;
+}
+.download-title
+{
+  font-family: cursive;
+  font-weight: bolder;
+  color:#918151;
+  font-size: 20px;
+}
+.pokemon-list
+{
+    font-weight:800;
+    color:#c0c0c0;
+    margin-left: 0px;
+}
+.pokemon-list:hover
+{
+    color:#c0c0c0;
 }
