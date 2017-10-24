@@ -53,4 +53,4 @@ def download():
     return send_file("Pokemon_List.csv", attachment_filename="Your_Pokemon_List.csv", as_attachment=True)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
