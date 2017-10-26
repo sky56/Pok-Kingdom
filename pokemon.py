@@ -10,13 +10,13 @@ def index():
         pokemon_name = request.form["pokemon"].strip()
         if len(pokemon_name) == 0:
             error_message = "Enter Pokémon Name!!"
-            return render_template("index.html",error_empty_message=error_message,download_pokemon='download.html')
+            return render_template("index.html",error_empty_message=error_message)
         else:
             url = 'https://pokeapi.co/api/v2/pokemon/'+pokemon_name.lower()+'/'
             results = requests.get(url)
             if results.status_code == 404:
                 error_message = "Pokémon name is Incorrect!!"
-                return render_template("index.html",error_message=error_message,download_pokemon='download.html')
+                return render_template("index.html",error_message=error_message)
             elif results.status_code == 200:
                 id = json.loads(results.text)['id']
                 image_url="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+str(id)+".png"
@@ -42,11 +42,11 @@ def index():
                 defense=str(json.loads(results.text)['stats'][3]['base_stat'])
                 attack=str(json.loads(results.text)['stats'][4]['base_stat'])
                 hp=str(json.loads(results.text)['stats'][5]['base_stat'])
-                return render_template("index.html",image_url=image_url,name=name,height=height,weight=weight,base_experience=base_experience,type=pokemon_type,abilities=pokemon_abilities,speed=speed,special_defense=special_defense,special_attack=special_attack,defense=defense,attack=attack,hp=hp,download_pokemon='download.html')
+                return render_template("index.html",image_url=image_url,name=name,height=height,weight=weight,base_experience=base_experience,type=pokemon_type,abilities=pokemon_abilities,speed=speed,special_defense=special_defense,special_attack=special_attack,defense=defense,attack=attack,hp=hp)
             else:
                 error_message = "Internal error occurred. Please try later!!"
-                return render_template("index.html",error_message=error_message,download_pokemon='download.html')
-    return render_template("index.html",download_pokemon='download.html')
+                return render_template("index.html",error_message=error_message)
+    return render_template("index.html")
 
 @app.route("/download/")
 def download():
